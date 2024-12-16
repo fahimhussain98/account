@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:elevation="4dp"
+    android:layout_margin="2dp"
+    android:background="@drawable/bordered_back"
+    android:layout_height="wrap_content">
+    
+    <TextView
+        app:layout_constraintEnd_toStartOf="@id/tv_operator_name"
+        android:id="@+id/tv_transaction_id"
+        android:textColor="@color/black"
+        android:layout_margin="8dp"
+        android:text="Transaction Id :- "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tv_operator_name"
+        android:textColor="@color/black"
+        android:layout_margin="8dp"
+        android:text="Operator :- "
+        app:layout_constraintStart_toEndOf="@id/tv_transaction_id"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        app:layout_constraintEnd_toStartOf="@id/tv_complaint_status"
+        android:id="@+id/tv_mobile_number"
+        android:textColor="@color/black"
+        android:layout_margin="8dp"
+        android:text="Mobile Number :- "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_transaction_id"
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+
+
+    <TextView
+        android:id="@+id/tv_complaint_status"
+        android:textColor="@color/black"
+        android:layout_margin="8dp"
+        android:text="Complaint Status :- "
+        app:layout_constraintStart_toEndOf="@id/tv_mobile_number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_operator_name"
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tv_complainDate"
+        android:textColor="@color/black"
+        android:layout_margin="8dp"
+        android:text="Complain Date :- "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_mobile_number"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/tv_updateDate"
+        android:textColor="@color/black"
+        android:layout_margin="8dp"
+        android:text="Update Date :- "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_complainDate"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tv_adminRemarks"
+        android:textColor="@color/black"
+        android:layout_margin="8dp"
+        android:text="Admin Remarks :- "
+       app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_updateDate"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

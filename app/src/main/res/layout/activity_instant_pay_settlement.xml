@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/settlement_layout"
+    android:layout_height="match_parent"
+    tools:context=".activities.SettlementActivity">
+
+    <TextView
+        android:id="@+id/text_settlement"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:gravity="center"
+        android:text="Settlement"
+        android:background="@color/purple_500"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"/>
+
+    <ImageView
+        android:id="@+id/img_back"
+        android:padding="10dp"
+        app:tint="@color/white"
+        android:src="@drawable/back"
+        app:layout_constraintBottom_toBottomOf="@id/text_settlement"
+        app:layout_constraintTop_toTopOf="@id/text_settlement"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="40dp"
+        android:layout_height="40dp"/>
+
+
+    <ScrollView
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_settlement"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/payment_type_container"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_margin="20dp"
+                android:background="@drawable/bordered_back"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <Spinner
+                    android:id="@+id/payment_type_spinner"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:background="#00000000"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/img_down"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/img_down"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginEnd="6dp"
+                    android:src="@drawable/down"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <EditText
+                android:inputType="number"
+                android:singleLine="true"
+                android:id="@+id/et_amount"
+                android:paddingEnd="2dp"
+                android:paddingStart="10dp"
+                android:hint="Amount"
+                android:background="@drawable/bordered_back"
+                android:layout_margin="20dp"
+                app:layout_constraintTop_toBottomOf="@id/payment_type_container"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                tools:visibility="visible"
+                android:visibility="gone"
+                android:id="@+id/bank_details_container"
+                app:layout_constraintTop_toBottomOf="@id/et_amount"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/bank_name_container"
+                    android:layout_width="0dp"
+                    android:layout_height="44dp"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/bordered_back"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <Spinner
+                        android:id="@+id/bank_name_spinner"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:background="#00000000"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/img_down3"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/img_down3"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_marginEnd="6dp"
+                        android:src="@drawable/down"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <EditText
+                    android:textColor="@color/black"
+                    android:singleLine="true"
+                    android:id="@+id/et_account_holder_name"
+                    android:paddingEnd="2dp"
+                    android:paddingStart="10dp"
+                    android:hint="Account Holder Name"
+                    android:background="@drawable/bordered_back"
+                    android:layout_margin="20dp"
+                    app:layout_constraintTop_toBottomOf="@id/bank_name_container"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"/>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/account_type_container"
+                    android:layout_width="0dp"
+                    android:layout_height="44dp"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/bordered_back"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/et_account_holder_name">
+
+                    <Spinner
+                        android:id="@+id/account_type_spinner"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:background="#00000000"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/img_down1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/img_down1"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_marginEnd="6dp"
+                        android:src="@drawable/down"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/transaction_type_container"
+                    android:layout_width="0dp"
+                    android:layout_height="44dp"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/bordered_back"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/account_type_container">
+
+                    <Spinner
+                        android:id="@+id/transaction_type_spinner"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:background="#00000000"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/img_down2"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/img_down2"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_marginEnd="6dp"
+                        android:src="@drawable/down"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <EditText
+                    android:textColor="@color/black"
+                    android:singleLine="true"
+                    android:id="@+id/et_account_number"
+                    android:paddingEnd="2dp"
+                    android:paddingStart="10dp"
+                    android:hint="Account Number"
+                    android:background="@drawable/bordered_back"
+                    android:layout_margin="20dp"
+                    app:layout_constraintTop_toBottomOf="@id/transaction_type_container"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"/>
+
+                <EditText
+                    android:textColor="@color/black"
+                    android:singleLine="true"
+                    android:id="@+id/et_ifsc_number"
+                    android:paddingEnd="2dp"
+                    android:paddingStart="10dp"
+                    android:hint="IFSC Number"
+                    android:background="@drawable/bordered_back"
+                    android:layout_margin="20dp"
+                    app:layout_constraintTop_toBottomOf="@id/et_account_number"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"/>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <Button
+                android:id="@+id/btn_submit"
+                android:textAllCaps="false"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp"
+                android:textColor="@color/white"
+                android:text="Submit"
+                android:layout_margin="20dp"
+                android:background="@drawable/button_back"
+                app:layout_constraintTop_toBottomOf="@id/bank_details_container"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"/>
+
+            <Button
+                tools:visibility="visible"
+                android:visibility="gone"
+                android:id="@+id/btn_add_banks"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_margin="20dp"
+                android:background="@drawable/button_back"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="Add More Banks"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btn_submit" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/change_password_layout"
+    tools:context=".activities.ChangeMpinActivity">
+
+<!--    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bar_container"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@drawable/otp_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:lineSpacingExtra="14dp"
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:gravity="center"
+            android:text="Change PIN"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bar_container">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/img_change_password"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:src="@drawable/changepassword"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/et_new_mpin"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/bordered_back"
+                android:elevation="3dp"
+                android:hint="Enter Your Mobile No"
+                android:inputType="number"
+                android:maxLength="10"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:singleLine="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/img_change_password" />
+
+            <EditText
+                android:id="@+id/et_confirm_mpin"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/bordered_back"
+                android:elevation="3dp"
+                android:hint="Enter Your Adhar Number"
+                android:inputType="number"
+                android:maxLength="12"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:singleLine="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_new_mpin" />
+
+            <EditText
+                android:id="@+id/et_enteryourEmailId"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/bordered_back"
+                android:elevation="3dp"
+                android:hint="Enter Your Email Id"
+                android:inputType="textEmailAddress"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:singleLine="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_confirm_mpin" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_change_mpin"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/button_back"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:text="Change PIN"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_enteryourEmailId" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>-->
+     <ImageView
+           android:layout_marginTop="1dp"
+           android:id="@+id/img_logo"
+           android:src="@drawable/logo"
+           app:layout_constraintTop_toTopOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           android:background="@color/teal_200"
+           android:layout_width="match_parent"
+           android:layout_height="250dp"/>
+
+       <TextView
+           android:id="@+id/text_generate_mpin"
+           android:textSize="18sp"
+           android:textColor="@color/white"
+           android:textStyle="bold"
+           android:text="Create New MPIN"
+           app:layout_constraintTop_toBottomOf="@id/img_logo"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"/>
+
+       <EditText
+           android:maxLength="6"
+           android:id="@+id/et_mpin"
+           android:singleLine="true"
+           android:inputType="numberPassword"
+           android:gravity="center"
+           android:hint="MPIN"
+           android:background="@drawable/bordered_back"
+           android:layout_marginHorizontal="40dp"
+           app:layout_constraintTop_toBottomOf="@id/text_generate_mpin"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           android:layout_width="match_parent"
+           android:layout_height="?attr/actionBarSize"/>
+
+       <EditText
+           android:maxLength="6"
+           android:id="@+id/et_confirm_mpin"
+           android:singleLine="true"
+           android:inputType="numberPassword"
+           android:gravity="center"
+           android:hint="Confirm MPIN"
+           android:background="@drawable/bordered_back"
+           android:layout_margin="40dp"
+           app:layout_constraintTop_toBottomOf="@id/et_mpin"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           android:layout_width="match_parent"
+           android:layout_height="?attr/actionBarSize"/>
+
+       <Button
+           android:id="@+id/btn_submit"
+           android:textColor="@color/white"
+           android:text="Submit"
+           android:background="@drawable/button_back"
+           android:layout_marginTop="40dp"
+           app:layout_constraintTop_toBottomOf="@id/et_confirm_mpin"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintEnd_toEndOf="@id/et_confirm_mpin"
+           android:layout_width="match_parent"
+           android:layout_height="40dp"
+           android:layout_marginStart="15dp"
+           android:layout_marginEnd="15dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

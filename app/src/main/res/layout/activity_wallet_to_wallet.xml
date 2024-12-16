@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.WalletToWalletActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+
+                android:textSize="18sp"
+                android:padding="10dp"
+                android:text="Wallet To Wallet"
+                android:textColor="@color/white"
+                android:background="@color/purple_700"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/et_mobile_number"
+                android:textColor="@color/black"
+                android:maxLength="10"
+                android:inputType="number"
+                android:paddingHorizontal="10dp"
+                android:hint="Mobile no."
+                android:elevation="8dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/home_dash_back_white"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"/>
+
+            <TextView
+                android:id="@+id/tv_username"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="10dp"
+                android:hint="Username"
+                android:elevation="8dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/home_dash_back_white"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"/>
+
+            <TextView
+                android:id="@+id/tv_company"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="10dp"
+                android:hint="Company Name"
+                android:elevation="8dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/home_dash_back_white"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"/>
+
+            <TextView
+                android:id="@+id/tv_email_id"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="10dp"
+                android:hint="Email Id"
+                android:elevation="8dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/home_dash_back_white"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"/>
+
+            <EditText
+                android:id="@+id/et_amount"
+                android:textColor="@color/black"
+                android:maxLength="6"
+                android:inputType="number"
+                android:paddingHorizontal="10dp"
+                android:hint="Amount"
+                android:elevation="8dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/home_dash_back_white"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"/>
+
+            <EditText
+                tools:visibility="visible"
+                android:visibility="gone"
+                android:id="@+id/et_remarks"
+                android:textColor="@color/black"
+                android:paddingHorizontal="10dp"
+                android:hint="Remarks"
+                android:elevation="8dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/home_dash_back_white"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_submit"
+                android:text="Submit"
+                android:textColor="@color/white"
+                android:background="@drawable/button_back"
+                android:layout_margin="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_proceed"
+                android:text="Proceed To Pay"
+                android:textColor="@color/white"
+                android:background="@drawable/button_back"
+                android:layout_margin="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

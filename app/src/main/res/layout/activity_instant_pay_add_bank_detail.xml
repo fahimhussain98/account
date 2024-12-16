@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.InstantPayAddBankDetailActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bar_container"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@drawable/tool_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:lineSpacingExtra="14dp"
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Add Bank Details"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bar_container">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                android:textColor="@color/black"
+                android:text="Select Bank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:textColor="@color/black"
+                android:id="@+id/tv_bank_name"
+                android:paddingHorizontal="10dp"
+                android:gravity="center_vertical"
+                android:hint="Select Bank Name"
+                android:layout_marginHorizontal="20dp"
+                android:background="@drawable/bordered_back"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"/>
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                android:textColor="@color/black"
+                android:text="Account Holder Name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <EditText
+                android:singleLine="true"
+                android:id="@+id/et_account_holder_name"
+                android:textColor="@color/black"
+                android:paddingHorizontal="10dp"
+                android:gravity="center_vertical"
+                android:hint="Account Holder Name"
+                android:layout_marginHorizontal="20dp"
+                android:background="@drawable/bordered_back"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"/>
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                android:textColor="@color/black"
+                android:text="Account Number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <EditText
+                android:singleLine="true"
+                android:id="@+id/et_account_number"
+                android:textColor="@color/black"
+                android:paddingHorizontal="10dp"
+                android:gravity="center_vertical"
+                android:hint="Account Number"
+                android:layout_marginHorizontal="20dp"
+                android:background="@drawable/bordered_back"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"/>
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                android:textColor="@color/black"
+                android:text="IFSC Code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <EditText
+                android:singleLine="true"
+                android:id="@+id/et_ifsc_number"
+                android:textColor="@color/black"
+                android:paddingHorizontal="10dp"
+                android:gravity="center_vertical"
+                android:hint="IFSC"
+                android:layout_marginHorizontal="20dp"
+                android:background="@drawable/bordered_back"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"/>
+
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+               <androidx.appcompat.widget.AppCompatButton
+                   android:layout_weight="1"
+                   android:background="@drawable/button_back_green"
+                   android:id="@+id/btn_add_details"
+                   android:textSize="18sp"
+                   android:textAllCaps="false"
+                   android:text="Add Details"
+                   android:textColor="@color/white"
+                   android:layout_margin="20dp"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:visibility="gone"
+                   tools:visibility="visible"/>
+               <androidx.appcompat.widget.AppCompatButton
+                   android:layout_weight="1"
+                   android:background="@drawable/button_back"
+                   android:id="@+id/btn_verify"
+                   android:textSize="18sp"
+                   android:textAllCaps="false"
+                   android:text="Verify Details"
+                   android:textColor="@color/white"
+                   android:layout_margin="20dp"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"/>
+
+           </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

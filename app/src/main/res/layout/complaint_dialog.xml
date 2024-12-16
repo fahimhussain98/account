@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@drawable/card_back_border"
+    android:layout_height="wrap_content"
+    android:paddingVertical="20dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <ImageView
+        app:tint="@color/purple_700"
+        android:id="@+id/img_close"
+        android:padding="6dp"
+        android:src="@drawable/cross"
+        android:layout_gravity="end"
+        android:layout_width="40dp"
+        android:layout_height="40dp"/>
+
+    <EditText
+        android:id="@+id/et_remarks"
+        android:background="@drawable/bordered_back"
+        android:hint="Remarks*"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_make_complaint"
+        android:layout_margin="20dp"
+        android:paddingHorizontal="20dp"
+        android:text="Make Complain"
+        android:textColor="@color/white"
+        android:background="@drawable/card_back_3"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+</LinearLayout>

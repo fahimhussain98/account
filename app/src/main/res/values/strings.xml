@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Account Pe</string>
+    <string name="tvMarque">Account Pe is one of the fastest growing names in Indian Recharge industry that is recognized for providing the best Recharge services.</string>
+    <string name="qr_code_text">Note : You will be redirect to new page then please scan QR code and Pay.Once you completed payment it will reflect in your wallet after sometime.</string>
+    <string name="paytm_text">Please install Paytm android application for smooth transaction\nIgnore if already done.</string>
+    <string name="safety_text">Your Data is safe with US …</string>
+    <string name="cashfree_gateway">You will be redirect to new page then please complete your banking transaction through Payment Gateway</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="share_earn_text1">share your referral link and invite your friends via SMS/Email/WhatsApp.You earn upto </string>
+    <string name="refer_earn_text1">Invite your friends to signup on Account Pe</string>
+    <string name="refer_earn_text2">Your Friend deposits minimum amount of \u20b910</string>
+    <string name="refer_earn_text3">You and your friend both get cashback of </string>
+    <string name="account_pay_private_limited"><font color="#003579" face="sans-serif-black" size="25">Account</font>PE <font color="#000000" face="sans-serif-black" size="25">Private Limited</font></string>
+
+
+</resources>

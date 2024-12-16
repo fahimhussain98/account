@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@drawable/card_back_white"
+    android:layout_height="wrap_content">
+
+    <EditText
+        android:id="@+id/et_mobile_number"
+        android:inputType="number"
+        android:maxLength="10"
+        android:paddingHorizontal="10dp"
+        android:hint="Mobile Number"
+        android:elevation="4dp"
+        android:background="@drawable/card_back_white"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"/>
+
+    <RadioGroup
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/rdb_success"
+            android:textColor="@color/green"
+            android:layout_margin="6dp"
+            android:text="Success"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <RadioButton
+            android:id="@+id/rdb_pending"
+            android:layout_margin="6dp"
+            android:text="Pending"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <RadioButton
+            android:id="@+id/rdb_failed"
+            android:textColor="@color/red"
+            android:layout_margin="6dp"
+            android:text="Failed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/et_amount"
+        android:inputType="number"
+        android:maxLength="6"
+        android:paddingHorizontal="10dp"
+        android:hint="Amount"
+        android:elevation="4dp"
+        android:background="@drawable/card_back_white"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"/>
+
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_cancel"
+            android:layout_margin="10dp"
+            android:text="Cancel"
+            android:textColor="@color/white"
+            android:background="@drawable/card_back_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_search"
+            android:layout_margin="10dp"
+            android:text="Search"
+            android:textColor="@color/white"
+            android:background="@drawable/card_back_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.OnBoardPaySprintActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:text="On Board User"
+            android:background="@color/purple_700"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"/>
+
+
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_margin="20dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/black"
+            android:padding="10dp"
+            android:text="Name"
+            android:background="@drawable/bordered_back"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"/>
+
+        <TextView
+            android:id="@+id/tv_mobile_number"
+            android:layout_margin="20dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/black"
+            android:padding="10dp"
+            android:text="Mobile No"
+            android:background="@drawable/bordered_back"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"/>
+
+        <TextView
+            android:id="@+id/tv_mail"
+            android:layout_margin="20dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/black"
+            android:padding="10dp"
+            android:text="Email Id"
+            android:background="@drawable/bordered_back"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"/>
+
+        <Button
+            android:id="@+id/btn_on_board"
+            android:text="On Board"
+            android:textColor="@color/white"
+            android:layout_margin="20dp"
+            android:background="@drawable/button_back_green"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"/>
+
+    </LinearLayout>
+
+</ScrollView>

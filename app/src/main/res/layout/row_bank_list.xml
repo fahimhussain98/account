@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="10dp"
+    android:layout_margin="4dp"
+    android:background="@drawable/card_back_border"
+    android:elevation="8dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_margin="2dp"
+        android:id="@+id/tv_bank_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Bank Name"
+        android:textColor="@color/purple_700"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_margin="2dp"
+        android:textSize="16sp"
+        android:id="@+id/tv_account_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Account Name"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:layout_margin="2dp"
+        android:textSize="16sp"
+        android:id="@+id/tv_account_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Account Number"
+        android:textColor="@color/purple_700"/>
+
+    <TextView
+        android:layout_margin="2dp"
+        android:textSize="16sp"
+        android:id="@+id/tv_ifsc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Ifsc"
+        android:textColor="@color/purple_700"/>
+
+    <TextView
+        android:layout_margin="2dp"
+        android:textSize="16sp"
+        android:id="@+id/tv_branch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Branch"
+        android:textColor="@color/purple_700"/>
+
+</LinearLayout>

@@ -1,0 +1,755 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/LifeInsuranceLayout"
+        tools:context=".activities.CredoAepsKycActivity"
+        >
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/insurance_shapeAbleImageView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/insuranceview5"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+
+
+        <ImageView
+            android:id="@+id/insuranceBackImg"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="30dp"
+            android:src="@drawable/back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:layout_width="220dp"
+            android:layout_height="90dp"
+            android:id="@+id/insurance_img"
+            android:padding="3dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginVertical="10dp"
+            android:src="@drawable/logo"
+            />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintTop_toBottomOf="@+id/insurance_img"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:fillViewport="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/signUp_info_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="50dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/signUp_info"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/button_back"
+                            android:paddingVertical="5dp"
+                            android:text="Aeps Kyc"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="22sp"
+                             />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_marginHorizontal="10dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="3dp"
+                            android:background="@color/black" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="23dp"
+                            android:gravity="left"
+                            android:text="First Name"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/insurance_username"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="15dp"
+                            android:layout_marginVertical="10dp"
+                            android:background="@drawable/bordered_back"
+                            android:elevation="80dp"
+                            app:cardElevation="80dp">
+
+                            <EditText
+                                android:id="@+id/username_et"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@android:color/transparent"
+                                android:hint="Enter First Name"
+                                android:maxLength="50"
+                                android:padding="10dp"
+                                android:singleLine="true"
+                                />
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="23dp"
+                            android:gravity="left"
+                            android:text="Last Name"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/insurance_username_lastname"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="15dp"
+                            android:layout_marginVertical="10dp"
+                            android:background="@drawable/bordered_back"
+                            android:elevation="80dp"
+                            app:cardElevation="80dp">
+
+                            <EditText
+                                android:id="@+id/username_last_et"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@android:color/transparent"
+                                android:hint="Enter Last Name"
+                                android:maxLength="50"
+                                android:padding="10dp"
+                                android:singleLine="true"
+                                />
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="23dp"
+                            android:gravity="left"
+                            android:text="Title"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/insurance_username_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="15dp"
+                            android:layout_marginVertical="10dp"
+                            android:background="@drawable/bordered_back"
+                            android:elevation="80dp"
+                            app:cardElevation="80dp">
+
+                            <EditText
+                                android:id="@+id/username_title_et"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@android:color/transparent"
+                                android:hint="Title"
+                                android:maxLength="50"
+                                android:padding="10dp"
+                                android:singleLine="true"
+                                />
+
+                        </com.google.android.material.card.MaterialCardView>
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="23dp"
+                            android:gravity="left"
+                            android:text="Shop Name"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/insurance_username_companyname"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="15dp"
+                            android:layout_marginVertical="10dp"
+                            android:background="@drawable/bordered_back"
+                            android:elevation="80dp"
+                            app:cardElevation="80dp">
+
+                            <EditText
+                                android:id="@+id/username_companyname_et"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@android:color/transparent"
+                                android:hint="Shop Name"
+                                android:maxLength="50"
+                                android:padding="10dp"
+                                android:singleLine="true"
+                                />
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="23dp"
+                            android:gravity="left"
+                            android:text="Bank Account No."
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/insurance_username_bankaccount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="15dp"
+                            android:layout_marginVertical="10dp"
+                            android:background="@drawable/bordered_back"
+                            android:elevation="80dp"
+                            app:cardElevation="80dp">
+
+                            <EditText
+                                android:id="@+id/username_bank_account_et"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:singleLine="true"
+                                android:inputType="number"
+                                android:background="@android:color/transparent"
+                                android:hint="Bank Account"
+                                android:maxLength="22"
+                                android:padding="10dp"
+                                />
+
+                        </com.google.android.material.card.MaterialCardView>
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="23dp"
+                            android:gravity="left"
+                            android:text="Bank Ifsc"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/insurance_username_bankifsc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="15dp"
+                            android:layout_marginVertical="10dp"
+                            android:background="@drawable/bordered_back"
+                            android:elevation="80dp"
+                            app:cardElevation="80dp">
+
+                            <EditText
+                                android:id="@+id/username_bank_ifsc_et"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:singleLine="true"
+                                android:background="@android:color/transparent"
+                                android:hint="Bank Ifsc"
+                                android:maxLength="22"
+                                android:padding="10dp"
+                                />
+
+                        </com.google.android.material.card.MaterialCardView>
+
+
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="23dp"
+                            android:gravity="left"
+                            android:text="Mobile No."
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/signUp_mobileNo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="15dp"
+                            android:layout_marginVertical="10dp"
+                            android:background="@drawable/bordered_back"
+                            android:elevation="80dp"
+                            app:cardElevation="80dp">
+
+                            <EditText
+                                android:id="@+id/insurancemobile_et"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@android:color/transparent"
+                                android:hint="Enter Mobile Number"
+                                android:inputType="number"
+                                android:maxLength="10"
+                                android:padding="10dp"
+                                android:singleLine="true"
+
+                                />
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="23dp"
+                            android:gravity="left"
+                            android:text="Date of Birth"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/insurance_dobCardView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="15dp"
+                            android:layout_marginVertical="10dp"
+                            android:background="@drawable/bordered_back"
+                            android:elevation="80dp"
+                            app:cardElevation="80dp">
+
+
+                            <TextView
+                                android:id="@+id/insuranceUserDob_tv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:drawableRight="@drawable/calendar"
+                                android:text="Select Date"
+                                android:textColor="@color/black"
+                                android:textSize="15sp" />
+
+                        </com.google.android.material.card.MaterialCardView>
+
+
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="23dp"
+                            android:gravity="left"
+                            android:text="Address"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/insurance_Address"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="15dp"
+                            android:layout_marginVertical="10dp"
+                            android:background="@drawable/bordered_back"
+                            android:elevation="80dp"
+                            app:cardElevation="80dp">
+
+                            <EditText
+                                android:id="@+id/insuranceAddress_et"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@android:color/transparent"
+                                android:hint="Enter Address"
+                                android:maxLength="100"
+                                android:padding="10dp"
+                                android:singleLine="true" />
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="23dp"
+                            android:gravity="left"
+                            android:text="Email"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/insurance_emailId"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="15dp"
+                            android:layout_marginVertical="10dp"
+                            android:background="@drawable/bordered_back"
+                            android:elevation="80dp"
+                            app:cardElevation="80dp">
+
+
+                            <EditText
+                                android:id="@+id/insuranceemailId_et"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@android:color/transparent"
+                                android:hint="Enter Email Id"
+                                android:inputType="textEmailAddress"
+                                android:maxLength="50"
+                                android:padding="10dp"
+                                android:singleLine="true" />
+
+                        </com.google.android.material.card.MaterialCardView>
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="23dp"
+                            android:gravity="left"
+                            android:text="Pincode"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/insurance_Pincode"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="15dp"
+                            android:layout_marginVertical="10dp"
+                            android:background="@drawable/bordered_back"
+                            android:elevation="80dp"
+                            app:cardElevation="80dp">
+
+                            <EditText
+                                android:id="@+id/insurancePincode_et"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@android:color/transparent"
+                                android:hint="Enter Pincode"
+                                android:inputType="number"
+                                android:maxLength="6"
+                                android:padding="10dp"
+                                android:singleLine="true" />
+
+                        </com.google.android.material.card.MaterialCardView>
+
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="23dp"
+                            android:gravity="left"
+                            android:text="Aadhar card no."
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/aadhar_cardview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="15dp"
+                            android:layout_marginVertical="10dp"
+                            android:background="@drawable/bordered_back"
+                            android:elevation="80dp"
+                            app:cardElevation="80dp">
+
+
+                            <EditText
+                                android:id="@+id/aadharcard_et"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@android:color/transparent"
+                                android:hint="Aadhar card"
+                                android:inputType="number"
+                                android:maxLength="12"
+                                android:padding="10dp"
+                                android:singleLine="true" />
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="23dp"
+                            android:gravity="left"
+                            android:text="Pan card no."
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/pancard_cardview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="15dp"
+                            android:layout_marginVertical="10dp"
+                            android:background="@drawable/bordered_back"
+                            android:elevation="80dp"
+                            app:cardElevation="80dp">
+
+
+                            <EditText
+                                android:id="@+id/pancard_et"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@android:color/transparent"
+                                android:hint="Pan card"
+                                android:maxLength="10"
+                                android:padding="10dp"
+                                android:singleLine="true" />
+
+                        </com.google.android.material.card.MaterialCardView>
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="23dp"
+                            android:gravity="left"
+                            android:text="Cancel Cheque no."
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/cancelcheq_cardview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="15dp"
+                            android:layout_marginVertical="10dp"
+                            android:background="@drawable/bordered_back"
+                            android:elevation="80dp"
+                            app:cardElevation="80dp">
+
+
+                            <EditText
+                                android:id="@+id/cancelcheque_et"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@android:color/transparent"
+                                android:hint="Cancel cheque no."
+                                android:maxLength="18"
+                                android:padding="10dp"
+                                android:singleLine="true" />
+
+                        </com.google.android.material.card.MaterialCardView>
+
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Upload Pan"
+                            android:layout_marginStart="23dp"
+                            android:gravity="left"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/insurance_uploadPanImage"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="15dp"
+                            android:layout_marginVertical="10dp"
+                            android:background="@color/white"
+                            android:elevation="80dp"
+                            app:cardElevation="80dp">
+                            <TextView
+                                android:id="@+id/insurance_uploadPantv"
+                                android:layout_margin="10dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:drawableRight="@drawable/upload"
+                                android:text="Upload Pan Image"
+                                android:textColor="@color/black"
+                                android:textSize="15sp" />
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Upload Aadhaar"
+                            android:layout_marginStart="23dp"
+                            android:gravity="left"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/insurance_uploadAadhaar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="15dp"
+                            android:layout_marginVertical="10dp"
+                            android:background="@color/white"
+                            android:elevation="80dp"
+                            app:cardElevation="80dp">
+                            <TextView
+                                android:id="@+id/insurance_uploadAadharTv"
+                                android:layout_margin="10dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:drawableRight="@drawable/upload"
+                                android:text="Upload Aadhaar Front"
+                                android:textColor="@color/black"
+                                android:textSize="15sp" />
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Upload Aadhaar Back"
+                            android:layout_marginStart="23dp"
+                            android:gravity="left"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/insurance_uploadAadhaarBack"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="15dp"
+                            android:layout_marginVertical="10dp"
+                            android:background="@color/white"
+                            android:elevation="80dp"
+                            app:cardElevation="80dp">
+                            <TextView
+                                android:id="@+id/insurance_uploadAadharBackTv"
+                                android:layout_margin="10dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:drawableRight="@drawable/upload"
+                                android:text="Upload Aadhaar Back"
+                                android:textColor="@color/black"
+                                android:textSize="15sp" />
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Upload Passbook / Cheque Image"
+                            android:layout_marginStart="23dp"
+                            android:gravity="left"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/insurance_uploadPassbook"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="15dp"
+                            android:layout_marginVertical="10dp"
+                            android:background="@color/white"
+                            android:elevation="80dp"
+                            app:cardElevation="80dp">
+                            <TextView
+                                android:id="@+id/insurance_uploadPassbookTv"
+                                android:layout_margin="10dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:drawableRight="@drawable/upload"
+                                android:text="Upload Cheque Image"
+                                android:textColor="@color/black"
+                                android:textSize="15sp" />
+
+                        </com.google.android.material.card.MaterialCardView>
+
+
+
+
+
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/insurance_proceed"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginHorizontal="30dp"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="50dp">
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/insuranceBtn"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="@drawable/button_back_green"
+
+                                android:drawableTint="@color/white"
+                                android:text="Submit"
+                                android:textAllCaps="false"
+                                android:textColor="#fff"
+                                android:textSize="18sp" />
+                        </androidx.cardview.widget.CardView>
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="10dp"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center"
+                            android:paddingBottom="10dp"
+                            android:text="NOTE :Kindly confirm all details before doing Submit ."
+                            android:textColor="@color/red"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

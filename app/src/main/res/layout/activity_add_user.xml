@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/add_user_layout"
+    tools:context=".activities.AddUserActivity">
+
+    <include
+        android:id="@+id/bar_container"
+        layout="@layout/toolbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ScrollView
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bar_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:textColor="@color/gray"
+                android:text="User Type"
+                android:id="@+id/text_user_type"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <Spinner
+                android:id="@+id/spinner_user_type"
+                android:background="@drawable/card_back_border"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                app:layout_constraintTop_toBottomOf="@id/text_user_type"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"/>
+            <ImageView
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/down"
+                app:tint="@color/gray"
+                app:layout_constraintBottom_toBottomOf="@id/spinner_user_type"
+                app:layout_constraintTop_toTopOf="@id/spinner_user_type"
+                app:layout_constraintEnd_toEndOf="@id/spinner_user_type"
+                android:layout_width="10dp"
+                android:layout_height="10dp"/>
+
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:textColor="@color/gray"
+                android:text="Owner Name"
+                android:id="@+id/text_owner_name"
+                app:layout_constraintTop_toBottomOf="@id/spinner_user_type"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <EditText
+                android:hint="Owner Name"
+                android:background="@drawable/card_back_border"
+                android:id="@+id/et_owner_name"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                app:layout_constraintTop_toBottomOf="@id/text_owner_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"/>
+
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:textColor="@color/gray"
+                android:text="Firm Name"
+                android:id="@+id/text_firm_name"
+                app:layout_constraintTop_toBottomOf="@id/et_owner_name"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <EditText
+                android:hint="Firm Name"
+                android:id="@+id/et_firm_name"
+                android:background="@drawable/card_back_border"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                app:layout_constraintTop_toBottomOf="@id/text_firm_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"/>
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:textColor="@color/gray"
+                android:text="Password"
+                android:id="@+id/text_password"
+                app:layout_constraintTop_toBottomOf="@id/et_firm_name"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:hint="Password"
+                android:id="@+id/et_password"
+                android:background="@drawable/card_back_border"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                app:layout_constraintTop_toBottomOf="@id/text_password"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"/>
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:textColor="@color/gray"
+                android:text="Date Of Birth"
+                android:id="@+id/text_dob"
+                app:layout_constraintTop_toBottomOf="@id/et_password"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:textColor="@color/black"
+                android:paddingHorizontal="10dp"
+                android:gravity="center_vertical"
+                android:textSize="16sp"
+                android:hint="DOB"
+                android:id="@+id/tv_dob"
+                android:background="@drawable/card_back_border"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                app:layout_constraintTop_toBottomOf="@id/text_dob"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"/>
+
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:textColor="@color/gray"
+                android:text="Address"
+                android:id="@+id/text_address"
+                app:layout_constraintTop_toBottomOf="@id/tv_dob"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <EditText
+                android:hint="Address"
+                android:id="@+id/et_address"
+                android:background="@drawable/card_back_border"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                app:layout_constraintTop_toBottomOf="@id/text_address"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"/>
+
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:textColor="@color/gray"
+                android:text="Scheme Name"
+                android:id="@+id/text_scheme_name"
+                app:layout_constraintTop_toBottomOf="@id/et_address"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <Spinner
+                android:id="@+id/spinner_scheme_name"
+                android:background="@drawable/card_back_border"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                app:layout_constraintTop_toBottomOf="@id/text_scheme_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"/>
+            <ImageView
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/down"
+                app:layout_constraintBottom_toBottomOf="@id/spinner_scheme_name"
+                app:layout_constraintTop_toTopOf="@id/spinner_scheme_name"
+                app:layout_constraintEnd_toEndOf="@id/spinner_scheme_name"
+                android:layout_width="30dp"
+                android:layout_height="30dp"/>
+
+
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:textColor="@color/gray"
+                android:text="Email"
+                android:id="@+id/text_email"
+                app:layout_constraintTop_toBottomOf="@id/spinner_scheme_name"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <EditText
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:id="@+id/et_email"
+                android:background="@drawable/card_back_border"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                app:layout_constraintTop_toBottomOf="@id/text_email"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"/>
+
+
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:textColor="@color/gray"
+                android:text="Mobile Number"
+                android:id="@+id/text_mobile_number"
+                app:layout_constraintTop_toBottomOf="@id/et_email"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <EditText
+                android:hint="Number"
+                android:inputType="phone"
+                android:maxLength="10"
+                android:id="@+id/et_mobile_number"
+                android:background="@drawable/card_back_border"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                app:layout_constraintTop_toBottomOf="@id/text_mobile_number"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize" />
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:textColor="@color/gray"
+                android:text="CAP Balance"
+                android:id="@+id/text_cap_balance"
+                app:layout_constraintTop_toBottomOf="@id/et_mobile_number"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:hint="Cap Balance"
+                android:inputType="phone"
+                android:maxLength="5"
+                android:id="@+id/et_cap_balance"
+                android:background="@drawable/card_back_border"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                app:layout_constraintTop_toBottomOf="@id/text_cap_balance"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize" />
+
+            <TextView
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:gravity="center_vertical"
+                android:hint="State"
+                android:paddingStart="6dp"
+                android:paddingEnd="40dp"
+                android:background="@drawable/card_back_border"
+                android:id="@+id/tv_state_name"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_cap_balance" />
+
+            <ImageView
+                android:src="@drawable/down"
+                android:layout_margin="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/tv_state_name"
+                app:layout_constraintTop_toTopOf="@id/tv_state_name"
+                app:layout_constraintEnd_toEndOf="@id/tv_state_name"
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>
+
+            <TextView
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:gravity="center_vertical"
+                android:hint="City"
+                android:paddingStart="6dp"
+                android:paddingEnd="40dp"
+                android:background="@drawable/card_back_border"
+                android:id="@+id/tv_city_name"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_state_name" />
+
+            <ImageView
+                android:src="@drawable/down"
+                android:layout_margin="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/tv_city_name"
+                app:layout_constraintTop_toTopOf="@id/tv_city_name"
+                app:layout_constraintEnd_toEndOf="@id/tv_city_name"
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:textColor="@color/gray"
+                android:text="Pancard Number"
+                android:id="@+id/text_pan_card"
+                app:layout_constraintTop_toBottomOf="@id/tv_city_name"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:hint="Pan Number"
+                android:maxLength="10"
+                android:id="@+id/et_pan_number"
+                android:background="@drawable/card_back_border"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                app:layout_constraintTop_toBottomOf="@id/text_pan_card"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize" />
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:textColor="@color/gray"
+                android:text="Aadhar Number"
+                android:id="@+id/text_aadhar_card"
+                app:layout_constraintTop_toBottomOf="@id/et_pan_number"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:inputType="number"
+                android:hint="AADHAR Number"
+                android:maxLength="12"
+                android:id="@+id/et_aadhar_number"
+                android:background="@drawable/card_back_border"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                app:layout_constraintTop_toBottomOf="@id/text_aadhar_card"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize" />
+
+            <Button
+                android:id="@+id/btn_proceed"
+                android:text="Proceed"
+                android:textColor="@color/white"
+                android:background="@drawable/card_back"
+                android:layout_margin="40dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_aadhar_number"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

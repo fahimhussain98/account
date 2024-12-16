@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/bottom_home"
+        android:icon="@drawable/home"
+        android:title="Home" />
+
+    <item
+        android:id="@+id/bottom_more"
+        android:icon="@drawable/others"
+        android:title="Others" />
+
+    <item
+        android:id="@+id/bottom_bank"
+        android:title="All Services" />
+
+    <item
+        android:id="@+id/bottom_report"
+        android:icon="@drawable/report"
+        android:title="Reports" />
+
+       <item
+           android:id="@+id/bottom_profile"
+        android:icon="@drawable/profile"
+        android:title="Profile" />
+
+
+
+</menu>

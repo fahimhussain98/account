@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "593235465665",
+    "project_id": "accountpe-23ee3",
+    "storage_bucket": "accountpe-23ee3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:593235465665:android:a1db43f1aecb5db5d8cb40",
+        "android_client_info": {
+          "package_name": "wts.com.accountpe"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "593235465665-r99pqqdife5o3j7gugbrm11j6o48sm0a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAHenmj03mVFf-jEu0P7FXpq-gOmEu365Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "593235465665-r99pqqdife5o3j7gugbrm11j6o48sm0a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

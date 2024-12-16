@@ -1,0 +1,785 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.ReportsFragment"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<LinearLayout android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.ReportsFragment"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/recharge_report_layout"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:elevation="8dp"
+            android:background="@drawable/card_back_white"
+            android:paddingVertical="14dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                app:tint="@color/purple_700"
+                android:src="@drawable/report1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>
+
+            <TextView
+                android:layout_marginVertical="4dp"
+                android:text="Recharge\nReport"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/money_report_layout"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:elevation="8dp"
+            android:background="@drawable/card_back_white"
+            android:paddingVertical="14dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <ImageView
+                android:src="@drawable/money_transfer"
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>
+
+            <TextView
+                android:layout_marginVertical="4dp"
+                android:text="DMT\nReport"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/express_money_report_layout"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:elevation="8dp"
+            android:background="@drawable/card_back_white"
+            android:paddingVertical="14dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            tools:visibility="visible">
+
+            <ImageView
+                android:src="@drawable/money_transfer"
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>
+
+            <TextView
+                android:layout_marginVertical="4dp"
+                android:text="ExpressDMT\nReport"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/fastagReport_layout"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:elevation="8dp"
+            android:background="@drawable/card_back_white"
+            android:paddingVertical="14dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+
+                android:src="@drawable/fastag"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:tint = "@color/purple_700"/>
+
+            <TextView
+                android:layout_marginVertical="4dp"
+                android:text="Fastag\nReport"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:elevation="8dp"
+            android:background="@drawable/card_back_white"
+            android:paddingVertical="14dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <ImageView
+                app:tint="@color/purple_700"
+                android:src="@drawable/report1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>
+
+            <TextView
+                android:layout_marginVertical="4dp"
+                android:text="Recharge\nReport"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/electricityReport_layout"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:elevation="8dp"
+            android:background="@drawable/card_back_white"
+            android:paddingVertical="14dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+
+                android:src="@drawable/electricity"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:tint = "@color/purple_700"/>
+
+            <TextView
+                android:layout_marginVertical="4dp"
+                android:text="Electricity\nReport"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        tools:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/insurance_report_layout"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:elevation="8dp"
+            android:background="@drawable/card_back_white"
+            android:paddingVertical="14dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            tools:visibility="visible">
+
+            <ImageView
+                android:src="@drawable/insurance_new"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:tint="@color/purple_700"/>
+
+            <TextView
+                android:layout_marginVertical="4dp"
+                android:text="Insurance\nReport"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/gasBooking_report_layout"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:elevation="8dp"
+            android:background="@drawable/card_back_white"
+            android:paddingVertical="14dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:src="@drawable/gas_new"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:tint = "@color/purple_700"/>
+
+            <TextView
+                android:layout_marginVertical="4dp"
+                android:text="Gas Booking\nReport"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        tools:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/loanRepay_report_layout"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:elevation="8dp"
+            android:background="@drawable/card_back_white"
+            android:paddingVertical="14dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            tools:visibility="visible">
+
+            <ImageView
+                android:src="@drawable/loan"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:tint="@color/purple_700"/>
+
+            <TextView
+                android:layout_marginVertical="4dp"
+                android:text="LoanRepayment\nReport"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/postpaid_report_layout"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:elevation="8dp"
+            android:background="@drawable/card_back_white"
+            android:paddingVertical="14dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            tools:visibility="visible">
+
+            <ImageView
+                android:src="@drawable/postpaid_new"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:tint="@color/purple_700"/>
+
+            <TextView
+                android:layout_marginVertical="4dp"
+                android:text="Postpaid\nReport"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        tools:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/wallettoWallet_layout"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:elevation="8dp"
+            android:background="@drawable/card_back_white"
+            android:paddingVertical="14dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            tools:visibility="visible">
+
+            <ImageView
+                app:tint="@color/purple_700"
+                android:src="@drawable/report3"
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>
+
+            <TextView
+                android:layout_marginVertical="4dp"
+                android:text="Wallet To Wallet\nReport"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/fundRequest_report_layout"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:elevation="8dp"
+            android:background="@drawable/card_back_white"
+            android:paddingVertical="14dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            tools:visibility="visible">
+
+            <ImageView
+                android:src="@drawable/report"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:tint="@color/purple_700"/>
+
+            <TextView
+                android:layout_marginVertical="4dp"
+                android:text="Fund\nReport"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ff_report_layout"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:elevation="8dp"
+            android:background="@drawable/card_back_white"
+            android:paddingVertical="14dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <ImageView
+                android:src="@drawable/gas_new"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:tint = "@color/purple_700"/>
+
+            <TextView
+                android:layout_marginVertical="4dp"
+                android:text="Gas Booking\nReport"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        tools:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/settlement_report_layout"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:elevation="8dp"
+            android:background="@drawable/card_back_white"
+            android:paddingVertical="14dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                app:tint="@color/purple_700"
+                android:src="@drawable/settlement"
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>
+
+            <TextView
+                android:layout_marginVertical="4dp"
+                android:text="Settlement\nReport"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/aeps_reports_layout"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:elevation="8dp"
+            android:background="@drawable/card_back_white"
+            android:paddingVertical="14dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:src="@drawable/aeps"
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>
+
+            <TextView
+                android:layout_marginVertical="4dp"
+                android:text="AEPS\nReport"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        tools:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/addMoney_layout"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:elevation="8dp"
+            android:background="@drawable/card_back_white"
+            android:paddingVertical="14dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                app:tint="@color/purple_700"
+                android:src="@drawable/report4"
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>
+
+            <TextView
+                android:layout_marginVertical="4dp"
+                android:text="AddMoney\nReport"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/addMoney2_layout"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:elevation="8dp"
+            android:background="@drawable/card_back_white"
+            android:paddingVertical="14dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <ImageView
+                app:tint="@color/purple_700"
+                android:src="@drawable/report4"
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>
+
+            <TextView
+                android:layout_marginVertical="4dp"
+                android:text="AddMoney2\nReport"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/complainReport_layout"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:elevation="8dp"
+            android:background="@drawable/card_back_white"
+            android:paddingVertical="14dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+
+                android:src="@drawable/report"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:tint = "@color/purple_700"/>
+
+            <TextView
+                android:layout_marginVertical="4dp"
+                android:text="Complain\nReport"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/day_book_layout"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:elevation="8dp"
+            android:background="@drawable/card_back_white"
+            android:paddingVertical="14dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <ImageView
+                app:tint="@color/purple_700"
+                android:src="@drawable/report4"
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>
+
+            <TextView
+                android:layout_marginVertical="4dp"
+                android:text="Daybook\nReport"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:id="@+id/wallet_report_layout"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:elevation="8dp"
+            android:background="@drawable/card_back_white"
+            android:paddingVertical="14dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                app:tint="@color/purple_700"
+                android:src="@drawable/wallet"
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>
+
+            <TextView
+                android:layout_marginVertical="4dp"
+                android:text="Wallet\nReport"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        tools:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/credit_report_layout"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:elevation="8dp"
+            android:background="@drawable/card_back_white"
+            android:paddingVertical="14dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <ImageView
+                android:src="@drawable/credit"
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>
+
+            <TextView
+                android:layout_marginVertical="4dp"
+                android:text="Credit\nReport"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/debit_report_layout"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:elevation="8dp"
+            android:background="@drawable/card_back_white"
+            android:paddingVertical="14dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <ImageView
+                android:src="@drawable/debit"
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>
+
+            <TextView
+                android:layout_marginVertical="4dp"
+                android:text="Debit\nReport"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+        <LinearLayout
+            android:id="@+id/my_commission_layout"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:elevation="8dp"
+            android:background="@drawable/card_back_white"
+            android:paddingVertical="14dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <ImageView
+
+                android:src="@drawable/commission"
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>
+
+            <TextView
+                android:layout_marginVertical="4dp"
+                android:text="My\nCommission"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/AepsWallet_report_layout"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:elevation="8dp"
+            android:background="@drawable/card_back_white"
+            android:paddingVertical="14dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <ImageView
+                app:tint="@color/purple_700"
+                android:src="@drawable/aeps"
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>
+
+            <TextView
+                android:layout_marginVertical="4dp"
+                android:text="Aeps Wallet\nReport"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
+</ScrollView>

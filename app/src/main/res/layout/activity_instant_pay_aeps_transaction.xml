@@ -1,0 +1,944 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.InstantPayAepsTransactionActivity">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@drawable/recharge_back"
+
+        android:gravity="center"
+        android:text="AEPS Transaction"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/home_dash_back_white"
+                android:elevation="8dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+
+                    android:text="Aadhar Enable Payment System"
+                    android:textColor="#250AEA"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_margin="4dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/aeps_img" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_aeps_balance"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="₹ 00.00"
+                            android:textColor="#11085B"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Available Balance"
+                            android:textColor="#280EE8"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <!--TRANSACTION TYPE LAYOUT 1st LAYOUT-->
+            <LinearLayout
+                android:id="@+id/transaction_type_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="8dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:text="Choose Transaction"
+                    android:textColor="#14095C"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <LinearLayout
+                        android:id="@+id/cash_withdraw_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/home_dash_back_white"
+                        android:elevation="6dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingTop="4dp">
+
+                        <ImageView
+                            android:id="@+id/img_cash_withdraw"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:src="@drawable/cash_withdraw_unselected" />
+
+                        <TextView
+                            android:id="@+id/tv_cash_withdraw"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/text_back"
+                            android:gravity="center"
+                            android:paddingTop="8dp"
+                            android:text="Cash\nWithdraw"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/balance_enquiry_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/home_dash_back_white"
+                        android:elevation="6dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingTop="4dp">
+
+                        <ImageView
+                            android:id="@+id/img_balance_enquiry"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:src="@drawable/balance_enquiry_unselected" />
+
+                        <TextView
+                            android:id="@+id/tv_balance_enquiry"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/text_back"
+                            android:gravity="center"
+                            android:paddingTop="8dp"
+                            android:text="Balance\nEnquiry"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/mini_statement_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/home_dash_back_white"
+                        android:elevation="6dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingTop="4dp">
+
+                        <ImageView
+                            android:id="@+id/img_mini_statement"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:src="@drawable/mini_statement_unselected" />
+
+                        <TextView
+                            android:id="@+id/tv_mini_statement"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/text_back"
+
+                            android:gravity="center"
+                            android:paddingTop="8dp"
+                            android:text="Mini\nStatement"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/aadhar_pay_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/home_dash_back_white"
+                        android:elevation="6dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingTop="4dp">
+
+                        <ImageView
+                            android:id="@+id/img_aadhar_pay"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:src="@drawable/aadhar_pay_unselected" />
+
+                        <TextView
+                            android:id="@+id/tv_aadhar_pay"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/text_back"
+
+                            android:gravity="center"
+                            android:paddingTop="8dp"
+                            android:text="Aadhar\nPay"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="8dp"
+                    android:layout_marginTop="20dp"
+
+                    android:gravity="center"
+                    android:text="Choose Transaction Type Then Proceed"
+                    android:textColor="#14095C"
+                    android:textSize="16sp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_proceed_transaction_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/button_back"
+
+                    android:text="Proceed"
+                    android:textColor="@color/white"
+
+
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/safe" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="Your data safe with us!"
+                        android:textColor="#14095C" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="We never store your Aadhar number in any form neither we share aadhar or account related details to anyone. Under RBI guidelines BC we are permitted to capture your aadhar number to complete your banking transaction through AEPS bridge" />
+
+            </LinearLayout>
+            <!--TRANSACTION TYPE LAYOUT 1st LAYOUT-->
+
+            <!--USER DETAIL LAYOUT 2nd LAYOUT-->
+            <LinearLayout
+
+                android:id="@+id/user_detail_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="Please fill up your Aadhar Details"
+                    android:textColor="@color/black"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+
+                    android:text="Make sure your aadhar is linked with bank account" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+
+                    android:text="Welcome !"
+                    android:textColor="@color/black"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:hint="Mobile Number"
+                    android:textColorHint="@color/gray"
+                    app:boxStrokeColor="@color/gray">
+
+                    <EditText
+                        android:id="@+id/et_mobile_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:singleLine="true"
+                        android:textColor="@color/black" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <RadioGroup
+                            android:id="@+id/rg_first"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+
+
+                            <RadioButton
+                                android:id="@+id/rb_pnb"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_marginStart="10dp" />
+
+                            <ImageView
+                                android:layout_width="60dp"
+                                android:layout_height="18dp"
+                                android:src="@drawable/pnb" />
+
+                            <RadioButton
+                                android:id="@+id/rb_axis"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_marginStart="10dp" />
+
+                            <ImageView
+                                android:layout_width="60dp"
+                                android:layout_height="40dp"
+                                android:src="@drawable/axis" />
+
+                            <RadioButton
+                                android:id="@+id/rb_icici"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_marginStart="10dp" />
+
+                            <ImageView
+                                android:layout_width="60dp"
+                                android:layout_height="40dp"
+                                android:src="@drawable/icici" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp">
+
+                        <RadioGroup
+                            android:id="@+id/rg_second"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/rb_bankOfBaroda"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_marginStart="10dp" />
+
+                            <ImageView
+                                android:layout_width="80dp"
+                                android:layout_height="30dp"
+                                android:src="@drawable/bank_of_baroda" />
+
+                            <RadioButton
+                                android:id="@+id/rb_baroda_upgraminbank"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_marginStart="10dp" />
+
+                            <ImageView
+                                android:layout_width="80dp"
+                                android:layout_height="30dp"
+                                android:src="@drawable/barodauttarpradeshgraminbank" />
+
+                            <RadioButton
+                                android:id="@+id/rb_canaraBank"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_marginStart="10dp"/>
+
+                            <ImageView
+                                android:layout_width="80dp"
+                                android:layout_height="40dp"
+                                android:src="@drawable/canara_bank" />
+
+
+                            <RadioButton
+                                android:id="@+id/rb_hdfc"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:visibility="gone"/>
+
+                            <ImageView
+                                android:layout_width="60dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/hdfc"
+                                android:visibility="gone"/>
+
+                            <RadioButton
+                                android:id="@+id/rb_union"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_marginStart="10dp"
+                                android:visibility="gone"/>
+
+                            <ImageView
+                                android:layout_width="60dp"
+                                android:layout_height="40dp"
+                                android:src="@drawable/union"
+                                android:visibility="gone"/>
+
+                            <RadioButton
+                                android:id="@+id/rb_kotak"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_marginStart="10dp"
+                                android:visibility="gone"/>
+
+                            <ImageView
+                                android:layout_width="60dp"
+                                android:layout_height="44dp"
+                                android:src="@drawable/kotak"
+                                android:visibility="gone"/>
+
+                            <RadioButton
+                                android:id="@+id/rb_yes_bank"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_marginStart="10dp"
+                                android:visibility="gone"/>
+
+                            <ImageView
+                                android:layout_width="60dp"
+                                android:layout_height="40dp"
+                                android:src="@drawable/yes_bank"
+                                android:visibility="gone"/>
+
+                        </RadioGroup>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <RadioGroup
+                            android:id="@+id/rg_third"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+                            <RadioButton
+                                android:id="@+id/rb_sbi"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_marginStart="10dp" />
+
+                            <ImageView
+                                android:layout_width="80dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/sbi" />
+
+                            <RadioButton
+                                android:id="@+id/rb_idbiBank"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_marginStart="10dp" />
+
+                            <ImageView
+                                android:layout_width="80dp"
+                                android:layout_height="40dp"
+                                android:src="@drawable/idbi_bank" />
+
+
+
+                            <RadioButton
+                                android:id="@+id/rb_airtelPaymentBank"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_marginStart="10dp" />
+
+                            <ImageView
+                                android:layout_width="80dp"
+                                android:layout_height="40dp"
+                                android:src="@drawable/airtel_payment_bank" />
+
+                        </RadioGroup>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/bordered_back"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_bank"
+                        android:layout_width="0dp"
+                        android:layout_height="?attr/actionBarSize"
+                        android:gravity="center_vertical"
+                        android:hint="Choose Bank"
+                        android:paddingHorizontal="10dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/gray"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/img_down"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/img_down"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/down"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:hint="Aadhar Number"
+                    android:textColorHint="@color/gray"
+                    app:boxStrokeColor="@color/gray">
+
+                    <EditText
+                        android:id="@+id/et_aadhar_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:maxLength="12"
+                        android:singleLine="true"
+                        android:textColor="@color/black" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_amount"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:hint="Amount"
+                    android:textColorHint="@color/gray"
+                    app:boxStrokeColor="@color/gray">
+
+                    <EditText
+                        android:id="@+id/et_amount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:maxLength="6"
+                        android:singleLine="true"
+                        android:textColor="@color/black" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:id="@+id/fast_amount_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="5">
+
+                    <TextView
+                        android:id="@+id/tv_500"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_back"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="₹ 500"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/tv_1000"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_back"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="₹ 1000"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/tv_2000"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_back"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="₹ 2000"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/tv_3000"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_back"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="₹ 3000"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/tv_5000"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_back"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="₹ 5000"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+
+                <CheckBox
+                    android:checked="true"
+                    android:id="@+id/ckb_terms_condition"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="40dp"
+                    android:text="Terms &amp; Condition*"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="60dp"
+                    android:text="Before you proceed please carefully read" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="60dp"
+                    android:text="Terms &amp; Condition"
+                    android:textColor="#005E96" />
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_proceed_user_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/button_back"
+                    android:text="Proceed"
+                    android:textColor="@color/white"
+
+
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+            <!--USER DETAIL LAYOUT 2nd LAYOUT-->
+
+            <!--DEVICE LAYOUT 3RD LAYOUT-->
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/device_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="CHOOSE DEVICE"
+                    android:textColor="@color/purple_700" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <LinearLayout
+                        android:id="@+id/morpho_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/home_dash_back_white"
+                        android:elevation="6dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingTop="4dp">
+
+                        <ImageView
+                            android:id="@+id/img_morpho"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:src="@drawable/morpho_unselected" />
+
+                        <TextView
+                            android:id="@+id/tv_morpho"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/text_back"
+                            android:gravity="center"
+                            android:paddingTop="8dp"
+                            android:text="Morpho"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/startek_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/home_dash_back_white"
+                        android:elevation="6dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingTop="4dp">
+
+                        <ImageView
+                            android:id="@+id/img_startek"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:src="@drawable/startek_unselected" />
+
+                        <TextView
+                            android:id="@+id/tv_startek"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/text_back"
+                            android:gravity="center"
+                            android:paddingTop="8dp"
+                            android:text="Startek"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/mantra_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/home_dash_back_white"
+                        android:elevation="6dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingTop="4dp">
+
+                        <ImageView
+                            android:id="@+id/img_mantra"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:src="@drawable/mantra_unselected" />
+
+                        <TextView
+                            android:id="@+id/tv_mantra"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/text_back"
+                            android:gravity="center"
+                            android:paddingTop="8dp"
+                            android:text="Mantra"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/evolute_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/home_dash_back_white"
+                        android:elevation="6dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingTop="4dp">
+
+                        <ImageView
+                            android:id="@+id/img_evolute"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:src="@drawable/evolute_unselected" />
+
+                        <TextView
+                            android:id="@+id/tv_evolute"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/text_back"
+                            android:gravity="center"
+                            android:paddingTop="8dp"
+                            android:text="Evolute"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_proceed_device"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/button_back"
+                    android:text="Proceed"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/safe" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="Your data safe with us!"
+                        android:textColor="#14095C" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="We never store your Aadhar number in any form neither we share aadhar or account related details to anyone. Under RBI guidelines BC we are permitted to capture your aadhar number to complete your banking transaction through AEPS bridge" />
+
+            </LinearLayout>
+            <!--DEVICE LAYOUT 3RD LAYOUT-->
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
